@@ -1,5 +1,5 @@
+import { CardList } from "@/components/CardList";
 import { Rubik } from "next/font/google";
-import { Card } from "@/components/Card";
 
 const rubik = Rubik({ 
   weight:["300","400","500","600"],
@@ -8,7 +8,7 @@ const rubik = Rubik({
 export default function Home() {
   return (
     <div className={rubik.className}>
-    <Card/>
+    <CardList/>
      
     </div>
   );
