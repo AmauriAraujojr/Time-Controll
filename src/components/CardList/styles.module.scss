@@ -1,9 +1,16 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .parent{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
-    background-color: aquamarine;
-    width: 70%;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+   
     }
