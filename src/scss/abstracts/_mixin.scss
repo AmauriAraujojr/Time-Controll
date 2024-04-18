@@ -1,0 +1,35 @@
+@mixin Heading-One {
+    font-size: 2.5rem;
+    font-weight: 600
+}
+
+;
+
+@mixin Heading-Two {
+    font-size: 1.125rem;
+
+}
+
+;
+
+@mixin Body-One {
+    font-size: 3.5rem;
+    font-weight: 300;
+
+}
+
+;
+
+@mixin Body-Two-Profile {
+    font-size: 1.125rem;
+    font-weight: 400;
+    cursor: pointer;
+
+
+}
+
+;
+
+@mixin Body-Two {
+    font-size: 0.938rem;
+}

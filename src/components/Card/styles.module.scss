@@ -1,0 +1,11 @@
+@use "../../scss/abstracts/" as *;
+
+.container{
+    width: 300px;
+    height: 400px;
+    background-color: $brand3;
+    p{
+        @include Body-One;
+     
+    }
+}

@@ -1,0 +1,8 @@
+@use './abstracts/'as*;
+@import './reset';
+@import './typography';
+
+body{
+    background-color:$brand1;
+
+}
