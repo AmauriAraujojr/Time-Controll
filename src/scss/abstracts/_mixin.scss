@@ -1,12 +1,14 @@
 @mixin Heading-One {
     font-size: 2.5rem;
-    font-weight: 600
+    font-weight: 300
 }
 
 ;
 
 @mixin Heading-Two {
     font-size: 1.125rem;
+    font-weight: 500;
+
 
 }
 
@@ -32,4 +34,6 @@
 
 @mixin Body-Two {
     font-size: 0.938rem;
+    font-weight: 400;
+
 }
