@@ -5,4 +5,10 @@
 body{
     background-color:$brand1;
 
+    @media(min-width:800px){
+
+        overflow: hidden;
+    }
+
+
 }

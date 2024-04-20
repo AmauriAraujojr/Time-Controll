@@ -1,24 +1,35 @@
 @use "../../../scss/abstracts/" as *;
 
 .box_principal {
-    width: 255px;
-    height: 518px;
+    width: 100%;
+    height: 203px;
     background-color: $brand2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 15px;
 
+    @media(min-width:800px) {
+        width: 255px;
+        height: 533px;
+    }
+
     .box_profile {
-        height: 354px;
-        // padding: 28px;
+        height: 133px;
         border-radius: 15px;
         background-color: $brand3;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap:10px;
-        .box_img{
+        align-items: center;
+
+        @media(min-width:800px) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 369px;
+
+        }
+
+        .box_img {
             padding: 0 28px;
 
             img {
@@ -34,7 +45,7 @@
             flex-direction: column;
             padding: 28px;
             justify-content: space-between;
-            gap:10px;
+            gap: 10px;
 
 
             h1 {
@@ -51,12 +62,17 @@
 
     .choices {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
         padding: 28px;
-        gap:27px;
-        
+        gap: 27px;
+
+        @media(min-width:800px) {
+            flex-direction: column;
+
+        }
+
         @include Body-Two-Profile;
+
         p:hover {
             color: $brand5;
 
