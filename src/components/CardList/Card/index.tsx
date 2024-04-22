@@ -12,9 +12,10 @@ import { symbol } from "zod";
 
 interface CardProps {
   time: TimeData;
+  renderTime: string;
 }
 
-export const Card = ({ time }: CardProps) => {
+export const Card = ({ time, renderTime }: CardProps) => {
   return (
     <li className={styles[`${time.title}`]} id={styles.box}>
       {time.title == "Work" ? (
@@ -47,10 +48,34 @@ export const Card = ({ time }: CardProps) => {
         </div>
 
         <div className={styles.box_hour}>
-          <p className={styles.time}>{time.timeframes.weekly.current}hrs</p>
-          <p className={styles.last}>
-            Last Week - {time.timeframes.weekly.previous}hrs
-          </p>
+          {renderTime === "weekly" ? (
+            <>
+              <p className={styles.time}>{time.timeframes.weekly.current}hrs</p>
+              <p className={styles.last}>
+                Last Week - {time.timeframes.weekly.previous}hrs
+              </p>
+            </>
+          ) : null}
+
+          {renderTime === "daily" ? (
+            <>
+              <p className={styles.time}>{time.timeframes.daily.current}hrs</p>
+              <p className={styles.last}>
+                Yesterday - {time.timeframes.daily.previous}hrs
+              </p>
+            </>
+          ) : null}
+
+          {renderTime === "monthly" ? (
+            <>
+              <p className={styles.time}>
+                {time.timeframes.monthly.current}hrs
+              </p>
+              <p className={styles.last}>
+                Last Month - {time.timeframes.monthly.previous}hrs
+              </p>
+            </>
+          ) : null}
         </div>
       </div>
     </li>
